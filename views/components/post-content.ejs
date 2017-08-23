@@ -1,15 +1,37 @@
-<div class="post-content">
-  <div class="ui grid">
-    <div class="four wide column">
-      <a class="avatar avatar-link"
-         href="/posts?author=<%= post.author._id %>"
-         data-title="<%= post.author.name %> | <%= ({m: '男', f: '女', x: '保密'})[post.author.gender] %>"
-         data-content="<%= post.author.bio %>">
-        <img class="avatar" src="/img/<%= post.author.avatar %>" style="height:100px,width:100px">
-      </a>
-    </div>
 
-    <div class="eight wide column">
+
+
+
+<div style="width:800px">
+
+
+    <div style="width:200px;height:300px;margin-left:120px;margin-top:0px;float:left;margin-right:20px;" >
+      <img  src="/img/<%= post.author.avatar %>" style="width:200px;height:150px" >
+      <span style="width:30%,height:100px"><%= post.author.name %></span>
+      <spna style="width:30%,height:100px"><%= ({m: '男', f: '女', x: '保密'})[post.author.gender] %></spna>
+      <span style="width:30%,height:100px"><%= post.author.bio %></span>
+    </div>
+    <div style="width:500px;height:300px;margin-left:400px;">
+      <div>
+        <h2><a href="/posts/<%= post._id %>"><%= post.title %></a></h3>
+        <pre><%- post.content %></pre>
+        <div><%= post.created_at %></div>
+        <div style="float:right;margin-top:-20px;">浏览(<%= post.pv %>)</div>
+        <% if (user && post.author._id && user._id.toString() === post.author._id.toString()) { %>
+
+
+
+            <div class="menu">
+              <div class="item" style="float:right;"><a href="/posts/<%= post._id %>/edit">编辑</a></div>
+              <div class="item"><a href="/posts/<%= post._id %>/remove">删除</a></div>
+            </div>
+
+        <% } %>
+
+      </div>
+    </div>
+</div>
+    <!-- <div class="eight wide column">
       <div class="ui segment">
         <h3><a href="/posts/<%= post._id %>"><%= post.title %></a></h3>
         <pre><%- post.content %></pre>
@@ -17,7 +39,7 @@
           <span class="tag"><%= post.created_at %></span>
           <span class="tag right">
             <span>浏览(<%= post.pv %>)</span>
-            <span>留言(<%= post.commentsCount %>)</span>
+
 
             <% if (user && post.author._id && user._id.toString() === post.author._id.toString()) { %>
               <div class="ui inline dropdown">
@@ -35,4 +57,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
