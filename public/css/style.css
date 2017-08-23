@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+
+body{
+  width: 1100px;
+  height: 100%;
+  margin:0 auto;
+  padding-top: 40px;
+}
+
+.nav{
+  float: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: rgb(115, 104, 148)
+}
+
+.nav h1{
+  margin: 10px 0;
+  display: inline-block;
+  color:rgba(24, 195, 241, 0.91)
+}
+
+.dropdown{
+  position:absolute;
+  right: 250px;
+  top: 75px;
+  z-index: 1000;
+}
+
+.dropdown .dropdown-menu .item{
+  color: rgb(13, 6, 84)
+}
+
+.panel{
+  background-color: rgba(20, 216, 222, 0.34)
+}
+
+
+.input-group{
+  margin-top: 20px;
+}
+
+.input-group-addon{
+  color: rgb(11, 116, 143);
+}
+
+.form-group{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.form-group label{
+  color: rgb(11, 116, 143);
+}
+
+.panel {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  display: block;
+}
+
+.field {
+  margin-top: 20px;
+}
+
+.z{
+  color: rgb(11, 116, 143);
+  display: block;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+#t{
+  width: 550px;
+  display: block;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.l{
+  color: rgb(11, 116, 143);
+}
+
+.alert{
+  width: 600px;
+
+  display: block;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+/*---------------------------------------------*/
+.div{
+  float: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+padding-top: 10px;
+padding-bottom: 10px;
+  background: rgba(38, 169, 218, 0.45)
+}
+
+#input{
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.input-group{
+  width: 400px;
+
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+ /*------------------------------------*/
+
+
+.row{
+  width:800px;
+  display: block;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#a{
+  width: 500px;
+}
+
+textarea{
+  resize: none;
+  height: 350px;
+}
+
+.col-md-4{
+  margin-top: 30px;
+}

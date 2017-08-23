@@ -1,0 +1,39 @@
+<%- include("header") %>
+<%- include("components/nav") %>
+<%- include("components/nav-menu") %>
+<%- include("components/notification") %>
+
+<div class="row">
+<div class="col-md-4" >
+    <a href="/posts?author=<% user._id %>" class="thumbnail"
+      data-title="<%= user.name %> | <%= ({m: '男', f: '女', x: '保密'})[user.gender] %>"
+       data-content="<%= user.bio %>">
+      <img src="/img/<%= user.avatar %>" class="img-circle">
+    </a>
+</div>
+
+  <div class="col-md-8">
+    <form method="post" action="/posts" class=" form-group">
+      <div id="a">
+        <lable>标题</lable>
+        <input type="text" name="title" class="form-control">
+      </div>
+      <div id="b">
+        <label>内容</label>
+        <textarea name="content" row="50"  id="a"></textarea>
+      </div>
+      <input type="submit" value="发布" >
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<%- include("footer") %>

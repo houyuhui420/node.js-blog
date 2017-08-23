@@ -1,0 +1,12 @@
+<%- include("header") %>
+<%- include("components/nav") %>
+<%- include("components/nav-menu") %>
+<%- include("components/notification") %>
+
+<% posts.forEach(function (post) { %>
+  <%- include('components/post-content', { post: post }) %>
+<% }) %>
+
+
+
+<%- include("footer") %>
